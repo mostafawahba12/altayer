@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Al Tayer Events Blinks - Discover our case studies, articles, and blogs on cutting-edge event technologies and creative breakthroughs.">
+  <title>Al Tayer Events - Our Blinks (Insights & Case Studies)</title>
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Custom Blinks CSS -->
+  <style>
+    /* Blinks Page Specific Styles */
+    .blinks-hero-section {
+      padding-top: calc(var(--navbar-height) + 40px);
+      padding-bottom: 60px;
+      min-height: auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .blinks-title-underline {
+      display: inline-block;
+      position: relative;
+    }
+
+    .blinks-title-underline::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--orange-primary);
+      border-radius: 2px;
+    }
+
+    .blinks-hero-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .blinks-hero-graphic-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Surreal eye and plant art container */
+    .blinks-art-container {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      height: 380px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Filters and Search Bar styles */
+    .blinks-filter-bar {
+      margin-bottom: 50px;
+    }
+
+    .filter-btn-group {
+      display: flex;
+      gap: 12px;
+    }
+
+    .blink-filter-btn {
+      border: 1px solid var(--border-gray);
+      background-color: var(--white);
+      color: var(--navy-primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 12px;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition-smooth);
+    }
+
+    .blink-filter-btn span.badge-num {
+      background-color: var(--orange-primary);
+      color: var(--white);
+      font-size: 0.75rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      transition: var(--transition-smooth);
+    }
+
+    .blink-filter-btn.active {
+      background-color: var(--orange-primary);
+      color: var(--white);
+      border-color: var(--orange-primary);
+      box-shadow: 0 8px 20px rgba(224, 105, 15, 0.15);
+    }
+
+    .blink-filter-btn.active span.badge-num {
+      background-color: var(--white);
+      color: var(--orange-primary);
+    }
+
+    .blinks-search-box {
+      position: relative;
+      width: 100%;
+    }
+
+    .blinks-search-box input {
+      border: 1px solid var(--border-gray);
+      background-color: var(--white);
+      padding: 14px 20px 14px 50px;
+      font-size: 0.95rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition-smooth);
+      width: 100%;
+    }
+
+    .blinks-search-box input:focus {
+      outline: none;
+      border-color: var(--orange-primary);
+      box-shadow: 0 5px 15px rgba(19, 33, 67, 0.05);
+    }
+
+    .blinks-search-box i.search-icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 1.15rem;
+    }
+
+    .view-toggle-group {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .view-btn {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      border: 1px solid var(--border-gray);
+      background-color: var(--white);
+      color: var(--navy-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition-smooth);
+    }
+
+    .view-btn.active {
+      background-color: var(--orange-primary);
+      color: var(--white);
+      border-color: var(--orange-primary);
+    }
+
+    /* Cards design */
+    .blinks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+
+    .blink-card {
+      background-color: var(--white);
+      border-radius: 24px;
+      border: 1px solid rgba(19, 33, 67, 0.03);
+      box-shadow: var(--shadow-subtle);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: var(--transition-smooth);
+    }
+
+    .blink-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .blink-img-wrapper {
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .blink-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .blink-card:hover .blink-img {
+      transform: scale(1.05);
+    }
+
+    .blink-card-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: rgba(251, 251, 250, 0.95);
+      backdrop-filter: blur(5px);
+      color: var(--navy-primary);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .blink-card-content {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .blink-card-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .blink-card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      line-height: 1.4;
+      margin-bottom: 15px;
+      transition: var(--transition-smooth);
+    }
+
+    .blink-card-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .blink-card-title a:hover {
+      color: var(--orange-primary);
+    }
+
+    .blink-card-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+    }
+
+    .blink-card-readmore {
+      margin-top: auto;
+      font-weight: 700;
+      color: var(--orange-primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      transition: var(--transition-smooth);
+    }
+
+    .blink-card-readmore:hover {
+      color: var(--navy-primary);
+    }
+
+    .blink-card-readmore i {
+      transition: transform 0.3s ease;
+    }
+
+    .blink-card-readmore:hover i {
+      transform: translateX(4px);
+    }
+
+    /* List layout alternate */
+    .blinks-grid.list-view {
+      grid-template-columns: 1fr;
+    }
+
+    .blinks-grid.list-view .blink-card {
+      flex-direction: row;
+      min-height: 250px;
+    }
+
+    .blinks-grid.list-view .blink-img-wrapper {
+      width: 350px;
+      height: 100%;
+    }
+
+    @media (max-width: 992px) {
+      .blinks-grid.list-view .blink-card {
+        flex-direction: column;
+      }
+      .blinks-grid.list-view .blink-img-wrapper {
+        width: 100%;
+        height: 230px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Glassmorphic Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <svg class="me-2" width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 80C30 50 70 40 90 40C70 50 30 70 10 80Z" fill="#e0690f" />
+            <path d="M20 90C45 75 75 70 90 70C75 75 45 85 20 90Z" fill="#d96a06" />
+            <path d="M15 70C35 40 65 30 80 30C65 40 35 60 15 70Z" fill="#e0690f" />
+          </svg>
+          <div>
+            <span class="navbar-brand-text">al tayer</span>
+            <span class="navbar-brand-desc">events</span>
+          </div>
+        </a>
+
+        <!-- Hamburger Toggler for Mobile -->
+        <button class="navbar-toggler border-0" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa-solid fa-bars" style="color: var(--navy-primary); font-size: 1.5rem;"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html#scope">Scope</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="vision-flow.html">Vision Flow</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="blinks.html">Blinks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link nav-cta-btn" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Blinks Hero Section -->
+  <section class="blinks-hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text Column -->
+        <div class="col-lg-7 reveal">
+          <h1 class="hero-title mb-4">
+            OUR <span class="dotted-text blinks-title-underline">BLINGS</span>
+          </h1>
+          <p class="blinks-hero-desc mb-4">
+            <strong>Blinks are our moments of vision — quick stories, insights, and event reflections that capture what's moving in our world.</strong>
+          </p>
+          <p class="blinks-hero-desc text-muted mb-0">
+            From cutting-edge event technologies to sustainability wins and creative breakthroughs, each Blink is a short look into how Al Tayer Events continues to see beyond.
+          </p>
+        </div>
+        
+        <!-- Surreal Eye & Plant Illustration Column -->
+        <div class="col-lg-5 mt-5 mt-lg-0 blinks-hero-graphic-col reveal">
+          <div class="blinks-art-container">
+            <img src="images/blinks.png" alt="Surreal Blinks Art" class="img-fluid" style="max-width: 100%; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Search Widget bar -->
+  <section class="container blinks-filter-bar">
+    <div class="row align-items-center gy-4">
+      <!-- Left side: Filter Tabs -->
+      <div class="col-lg-5 col-md-6 reveal">
+        <div class="filter-btn-group">
+          <button class="blink-filter-btn active" data-category="case-study">
+            <i class="fa-regular fa-lightbulb"></i>
+            Case Studies
+            <span class="badge-num">2</span>
+          </button>
+          <button class="blink-filter-btn" data-category="article">
+            <i class="fa-regular fa-file-lines"></i>
+            Articles & Blogs
+            <span class="badge-num">3</span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Center: Search Input -->
+      <div class="col-lg-5 col-md-6 reveal">
+        <div class="blinks-search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="blinksSearch" placeholder="Search articles by title, topic, or keyword...">
+        </div>
+      </div>
+      
+      <!-- Right side: View Toggle -->
+      <div class="col-lg-2 col-12 text-end reveal">
+        <div class="view-toggle-group">
+          <div class="view-btn active" id="btnGridView" title="Grid View">
+            <i class="fa-solid fa-grip-vertical"></i>
+          </div>
+          <div class="view-btn" id="btnListView" title="List View">
+            <i class="fa-solid fa-list"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blinks Grid Cards Section -->
+  <main class="container">
+    <div class="blinks-grid reveal" id="blinksGrid">
+      
+      <!-- Card 1 (Case Study) -->
+      <article class="blink-card" data-category="case-study">
+        <div class="blink-img-wrapper">
+          <img class="blink-img" src="https://images.unsplash.com/photo-1558403194-611308249627?auto=format&fit=crop&w=800&q=80" alt="Virtual Events Summit Portrait" loading="lazy">
+          <span class="blink-card-badge">Case Study</span>
+        </div>
+        <div class="blink-card-content">
+          <span class="blink-card-date">May 18, 2026 • 5 min read</span>
+          <h3 class="blink-card-title">
+            <a href="#">Redefining Virtual Corporate Summits</a>
+          </h3>
+          <p class="blink-card-desc">
+            How Al Tayer Events designed and executed a multi-platform virtual summit for 5,000 global participants with zero lag and immersive stage setups.
+          </p>
+          <a href="#" class="blink-card-readmore">
+            Read Full Case Study <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2 (Case Study) -->
+      <article class="blink-card" data-category="case-study">
+        <div class="blink-img-wrapper">
+          <img class="blink-img" src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80" alt="Tech stage setup" loading="lazy">
+          <span class="blink-card-badge">Case Study</span>
+        </div>
+        <div class="blink-card-content">
+          <span class="blink-card-date">April 24, 2026 • 7 min read</span>
+          <h3 class="blink-card-title">
+            <a href="#">Sustainable Stage Designs: The Green Event Revolution</a>
+          </h3>
+          <p class="blink-card-desc">
+            Exploring the deployment of 100% recyclable stage sets and energy-efficient LED projection mappings that reduced carbon footprints by 45%.
+          </p>
+          <a href="#" class="blink-card-readmore">
+            Read Full Case Study <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3 (Article) -->
+      <article class="blink-card" data-category="article" style="display:none;">
+        <div class="blink-img-wrapper">
+          <img class="blink-img" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="People at interactive display" loading="lazy">
+          <span class="blink-card-badge">Article & Blog</span>
+        </div>
+        <div class="blink-card-content">
+          <span class="blink-card-date">May 12, 2026 • 4 min read</span>
+          <h3 class="blink-card-title">
+            <a href="#">Projection Mapping: The Future of Branding Experience</a>
+          </h3>
+          <p class="blink-card-desc">
+            A comprehensive look at how 3D spatial mapping transforms structural architectures into live, narrative storytelling platforms.
+          </p>
+          <a href="#" class="blink-card-readmore">
+            Read Article <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 4 (Article) -->
+      <article class="blink-card" data-category="article" style="display:none;">
+        <div class="blink-img-wrapper">
+          <img class="blink-img" src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80" alt="Holographic projections at event" loading="lazy">
+          <span class="blink-card-badge">Article & Blog</span>
+        </div>
+        <div class="blink-card-content">
+          <span class="blink-card-date">May 02, 2026 • 3 min read</span>
+          <h3 class="blink-card-title">
+            <a href="#">Holograms & AR: Engaging the Next-Gen Attendees</a>
+          </h3>
+          <p class="blink-card-desc">
+            How spatial augmented reality boosts guest engagement rates by offering customizable 3D interactions and personalized avatars.
+          </p>
+          <a href="#" class="blink-card-readmore">
+            Read Article <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 5 (Article) -->
+      <article class="blink-card" data-category="article" style="display:none;">
+        <div class="blink-img-wrapper">
+          <img class="blink-img" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Webinar filming setup" loading="lazy">
+          <span class="blink-card-badge">Article & Blog</span>
+        </div>
+        <div class="blink-card-content">
+          <span class="blink-card-date">March 15, 2026 • 5 min read</span>
+          <h3 class="blink-card-title">
+            <a href="#">The Blueprint of Premium Webinar Series Production</a>
+          </h3>
+          <p class="blink-card-desc">
+            Essential lighting, framing, and sound engineering protocols required to execute professional broadcasting webinars.
+          </p>
+          <a href="#" class="blink-card-readmore">
+            Read Article <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Sticky Premium Footer -->
+  <footer class="custom-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- Column 1: Logo & Info -->
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <div class="footer-logo-container d-flex align-items-center mb-4">
+            <div class="footer-logo-text text-start">
+              <div class="footer-brand-text">al tayer</div>
+              <div class="footer-brand-desc">events</div>
+            </div>
+            <svg class="footer-logo-svg ms-2" width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 80C30 50 70 40 90 40C70 50 30 70 10 80Z" fill="#e0690f" />
+              <path d="M20 90C45 75 75 70 90 70C75 75 45 85 20 90Z" fill="#d96a06" />
+              <path d="M15 70C35 40 65 30 80 30C65 40 35 60 15 70Z" fill="#e0690f" />
+            </svg>
+          </div>
+          
+          <div class="footer-contact-item mb-3 d-flex align-items-start gap-2">
+            <i class="fa-solid fa-location-dot footer-icon-orange mt-1"></i>
+            <span class="footer-contact-text text-start">
+              Garhoud Atrium - 2nd St<br>
+              Al Garhoud - Dubai<br>
+              PO Box 2623 United Arab Emirates
+            </span>
+          </div>
+          
+          <div class="footer-contact-item mb-4 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-globe footer-icon-orange"></i>
+            <a href="http://www.altayerevents.com" target="_blank" class="footer-link-navy">www.altayerevents.com</a>
+          </div>
+          
+          <div class="footer-socials">
+            <a href="#" class="footer-social-btn"><i class="fa-regular fa-comment-dots"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" class="footer-social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2: Company Info -->
+        <div class="col-lg-3 offset-lg-1 col-md-6 footer-widget">
+          <h5 class="footer-widget-title-orange mb-4">Company Info</h5>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link-navy">Overview</a></li>
+            <li><a href="contact.html" class="footer-link-navy">About Us</a></li>
+            <li><a href="index.html#scope" class="footer-link-navy">Scope</a></li>
+            <li><a href="vision-flow.html" class="footer-link-navy">Vision Flow</a></li>
+            <li><a href="index.html#partners" class="footer-link-navy">Partners</a></li>
+            <li><a href="contact.html" class="footer-link-orange fw-bold">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3: Contact Details -->
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <h5 class="footer-widget-title-orange mb-4">Contact</h5>
+          
+          <div class="footer-contact-item mb-3 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-phone footer-icon-orange"></i>
+            <a href="tel:+971526042430" class="footer-link-navy">+971 526042430</a>
+          </div>
+          
+          <div class="footer-contact-item mb-3 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-phone footer-icon-orange"></i>
+            <a href="tel:+97142055069" class="footer-link-navy">+971 4 2055069</a>
+          </div>
+          
+          <div class="footer-contact-item mb-3 d-flex align-items-center gap-2">
+            <i class="fa-regular fa-envelope footer-icon-orange"></i>
+            <a href="mailto:altayerevents@altayer.com" class="footer-link-navy">altayerevents@altayer.com</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom Centered -->
+      <div class="footer-bottom-centered text-center">
+        <p class="footer-copyright-text mb-0">
+          © Al Tayer all rights 2025 - <span class="footer-copyright-orange">Designed by Brancherz</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom Script -->
+  <script src="js/main.js"></script>
+  
+  <!-- Blinks Filtering Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('.blink-filter-btn');
+      const cards = document.querySelectorAll('.blink-card');
+      const searchInput = document.getElementById('blinksSearch');
+      const gridViewBtn = document.getElementById('btnGridView');
+      const listViewBtn = document.getElementById('btnListView');
+      const blinksGrid = document.getElementById('blinksGrid');
+      
+      let activeCategory = 'case-study'; // default active
+
+      // 1. Grid/List toggle layout
+      gridViewBtn.addEventListener('click', () => {
+        gridViewBtn.classList.add('active');
+        listViewBtn.classList.remove('active');
+        blinksGrid.classList.remove('list-view');
+      });
+
+      listViewBtn.addEventListener('click', () => {
+        listViewBtn.classList.add('active');
+        gridViewBtn.classList.remove('active');
+        blinksGrid.classList.add('list-view');
+      });
+
+      // 2. Category Filter & Search matching
+      const filterCards = () => {
+        const query = searchInput.value.toLowerCase().trim();
+        
+        cards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          const title = card.querySelector('.blink-card-title').textContent.toLowerCase();
+          const desc = card.querySelector('.blink-card-desc').textContent.toLowerCase();
+          
+          const categoryMatches = (cardCategory === activeCategory);
+          const searchMatches = !query || title.includes(query) || desc.includes(query);
+          
+          if (categoryMatches && searchMatches) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      };
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeCategory = btn.getAttribute('data-category');
+          filterCards();
+        });
+      });
+
+      searchInput.addEventListener('input', filterCards);
+    });
+  </script>
+</body>
+</html>

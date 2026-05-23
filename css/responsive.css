@@ -1,0 +1,258 @@
+/* 
+================================================================
+   Al Tayer Events - Responsive Media Queries
+================================================================
+*/
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --navbar-height: 70px;
+  }
+  
+  .hero-section {
+    padding-top: calc(var(--navbar-height) + 30px);
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    margin: 0 auto 30px auto;
+  }
+  
+  .hero-graphic-container {
+    height: 400px;
+    margin-top: 40px;
+  }
+  
+  .scope-title {
+    font-size: 2.3rem;
+  }
+  
+  .scope-accordion-container {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Scope Section Accordion Stack Vertically on Mobile */
+  .scope-accordion-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .scope-panel {
+    flex: none;
+    width: 100%;
+    min-height: 70px;
+    height: 70px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .scope-panel-title-collapsed {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    transform: none;
+    font-size: 1.2rem;
+    margin: 0;
+    opacity: 1;
+  }
+  
+  .scope-panel-content {
+    display: none;
+    opacity: 0;
+  }
+  
+  /* Expanded State for Mobile */
+  .scope-panel.expanded {
+    height: auto;
+    min-height: auto;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .scope-panel.expanded .scope-panel-title-collapsed {
+    display: none;
+  }
+  
+  .scope-panel.expanded .scope-panel-content {
+    display: flex;
+    opacity: 1;
+    height: auto;
+    width: 100%;
+  }
+  
+  .scope-panel-title-expanded {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .scope-panel-img-wrapper {
+    height: 140px;
+    margin-bottom: 20px;
+  }
+  
+  .scope-panel-btn {
+    width: 100%;
+  }
+
+  /* Hamburger Menu Mobile Overlay Styling */
+  .custom-navbar .navbar-collapse {
+    background-color: var(--white);
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    padding: 20px 30px 30px 30px;
+    border-bottom: 1px solid rgba(19, 33, 67, 0.08);
+    box-shadow: 0 10px 20px rgba(19, 33, 67, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .custom-navbar .navbar-collapse.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .custom-nav-link {
+    padding: 12px 0 !important;
+  }
+  
+  .custom-nav-link::after {
+    left: 0;
+    transform: none;
+    bottom: 4px;
+  }
+  
+  .custom-nav-link:hover::after,
+  .custom-nav-link.active::after {
+    width: 40px;
+  }
+
+  .nav-cta-btn {
+    margin-left: 0;
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  
+  .scope-title {
+    font-size: 2rem;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-bottom-links a {
+    margin: 0 10px;
+  }
+}
+
+/* 
+================================================================
+   Figma Design Replication - Responsive Additions
+================================================================
+*/
+
+@media (max-width: 992px) {
+  .logo-row {
+    gap: 25px 35px;
+  }
+  .partner-logo {
+    height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .eye-cta-handdrawn-arrow {
+    right: -30px;
+    top: -25px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .testimonial-circle-card {
+    width: 280px;
+    height: 280px;
+    padding: 35px 25px;
+  }
+  
+  .curved-stars-svg {
+    width: 100px;
+    height: 100px;
+    top: -8px;
+    right: -8px;
+  }
+  
+  .contact-graphic-col {
+    margin-top: 40px;
+    min-height: auto;
+  }
+  .contact-envelope-svg {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .eye-cta-handdrawn-arrow {
+    display: none;
+  }
+  
+  .partners-section .section-title,
+  .testimonials-section .section-title,
+  .blings-home-section .section-title,
+  .share-vision-section .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .testimonial-circle-card {
+    width: 260px;
+    height: 260px;
+    padding: 25px 15px;
+  }
+  
+  .testimonial-body {
+    font-size: 0.78rem;
+  }
+  
+  .partners-handdrawn-footer,
+  .testimonials-handdrawn-footer {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-right: 0;
+    margin-top: 30px;
+  }
+  
+  .blings-explore-all-link {
+    font-size: 1.8rem;
+  }
+}
+
