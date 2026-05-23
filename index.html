@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Al Tayer Events - Roots in 40+ Years of Excellence. Premium event design, virtual engagement, and insightful technologies.">
+  <meta name="description"
+    content="Al Tayer Events - Roots in 40+ Years of Excellence. Premium event design, virtual engagement, and insightful technologies.">
   <title>Al Tayer Events - Rooted in Excellence</title>
-  
+
   <!-- Bootstrap 5.3 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
 
   <!-- Sticky Glassmorphic Header -->
@@ -36,7 +39,8 @@
         </a>
 
         <!-- Hamburger Toggler for Mobile -->
-        <button class="navbar-toggler border-0" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler border-0" type="button" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="fa-solid fa-bars" style="color: var(--navy-primary); font-size: 1.5rem;"></span>
         </button>
 
@@ -69,46 +73,48 @@
     <div class="container">
       <div class="row align-items-center">
         <!-- Text Column -->
-        <div class="col-lg-6 reveal">
+        <div class="col-lg-5 reveal px-4">
           <h1 class="hero-title">
             ROOTED IN<br>
-            <span class="dotted-text">40+ YEARS</span><br>
-            OF EXCELLENCE <span class="star-accent" style="color: var(--orange-primary); animation: pulseStar 3s ease-in-out infinite alternate;">✦</span>
+            <span class="dotted-text" data-text="40+ YEARS">40+ YEARS</span><br>
+            OF EXCELLENCE <span class="star-accent"
+              style="color: var(--orange-primary); animation: pulseStar 3s ease-in-out infinite alternate;">✦</span>
           </h1>
-          <p class="hero-subtitle" style="font-size: 1.1rem; line-height: 1.7; max-width: 540px;">
+          <!-- Hero Subtitle – changes per slide -->
+          <p class="hero-subtitle" id="hero-subtitle-text"
+            style="font-size: 1.1rem; line-height: 1.7; max-width: 540px;">
             Born in a lasting city with ever-growing appetite for evolving.<br>
-            Dubai has always been a leading tourism and events hub. Al-Tayer travel and Al-Tayer events continue to grow with this market.
+            Dubai has always been a leading tourism and events hub. Al-Tayer travel and Al-Tayer events continue to
+            grow
+            with this market.
           </p>
         </div>
-        
-        <!-- Graphical / Image Column -->
-        <div class="col-lg-6 mt-5 mt-lg-0 reveal">
+
+        <!-- Graphical / Image Column — Hero Slider -->
+        <div class="col-lg-7 mt-2 mt-lg-0 reveal">
           <div class="hero-graphic-container">
-            <!-- Museum of the Future Backdrop Image -->
-            <img class="hero-bg-crowd" src="https://images.unsplash.com/photo-1647424018304-45370d032890?auto=format&fit=crop&w=1000&q=80" alt="Museum of the Future Dubai" loading="lazy">
-            <div class="hero-swoosh-overlay"></div>
-            
-            <!-- Styled Translucent Swoosh overlay representing the Orange "T" Wings Logo from Figma -->
-            <svg class="hero-orange-swoosh" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Top Big Swoosh -->
-              <path d="M 50,400 C 150,220 380,180 480,180 C 380,220 150,320 50,400 Z" fill="url(#orange-grad-1)" opacity="0.9" />
-              <!-- Bottom Small Swoosh -->
-              <path d="M 120,430 C 220,350 360,330 420,330 C 360,350 220,400 120,430 Z" fill="url(#orange-grad-2)" opacity="0.95" />
-              
-              <!-- Definitions for smooth premium gradients -->
-              <defs>
-                <linearGradient id="orange-grad-1" x1="50" y1="290" x2="480" y2="290" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#e0690f" />
-                  <stop offset="50%" stop-color="#ff7a18" />
-                  <stop offset="100%" stop-color="#ffb64d" />
-                </linearGradient>
-                <linearGradient id="orange-grad-2" x1="120" y1="380" x2="420" y2="380" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#d96a06" />
-                  <stop offset="100%" stop-color="#ff7a18" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
+            <!-- ── Slides Stack ── -->
+            <div class="hero-slider-track" id="heroSliderTrack">
+              <div class="hero-slide active">
+                <img src="./images/slider1.png" alt="Al Tayer Events – slide 1" loading="eager">
+              </div>
+              <div class="hero-slide">
+                <img src="./images/slider2.png" alt="Al Tayer Events – slide 2" loading="lazy">
+              </div>
+              <div class="hero-slide">
+                <img src="./images/slider3.png" alt="Al Tayer Events – slide 3" loading="lazy">
+              </div>
+              <div class="hero-slide">
+                <img src="./images/slider4.png" alt="Al Tayer Events – slide 4" loading="lazy">
+              </div>
+              <div class="hero-slide">
+                <img src="./images/slider5.png" alt="Al Tayer Events – slide 5" loading="lazy">
+              </div>
+            </div>
+            <!-- ── Radial fade vignette ── -->
+ 
+
+           </div><!-- /hero-graphic-container -->
         </div>
       </div>
     </div>
@@ -122,52 +128,33 @@
   <section id="scope" class="scope-section">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-8 text-center reveal">
-          <h2 class="scope-title">OUR SCOPE</h2>
+        <div class="col-md-8 text-center reveal active">
+          <h2 class="scope-title  ">
+            OUR
+            <span class="dotted-text" data-text="SCOPE">SCOPE</span>
+            <span class="star-accent"
+              style="color: var(--orange-primary); animation: pulseStar 3s ease-in-out infinite alternate;">✦</span>
+          </h2>
           <p class="scope-desc">
-            Explore our specialized divisions. Click any panel below to discover our comprehensive event management and production capabilities.
+            Explore our specialized divisions. Click any panel below to discover our comprehensive event management and
+            production capabilities.
           </p>
         </div>
       </div>
-      
+
       <!-- Interactive Accordion Panels -->
-      <div class="scope-accordion-container reveal">
-        
+      <div class="scope-accordion-container reveal active">
+
         <!-- Panel 1: Activities and Experience (Expanded by Default) -->
         <div class="scope-panel expanded">
           <div class="scope-panel-title-collapsed">Activities and Experience</div>
-          
+
           <div class="scope-panel-content">
             <h3 class="scope-panel-title-expanded">Activities and Experience</h3>
             <div class="scope-panel-img-wrapper">
               <!-- Inline SVG representing the orange robot character speaking at podium -->
-              <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Robotic Podium -->
-                <rect x="55" y="90" width="40" height="45" rx="6" fill="#e0690f" stroke="#132143" stroke-width="2.5" />
-                <ellipse cx="75" cy="90" rx="24" ry="8" fill="#e0690f" stroke="#132143" stroke-width="2.5" />
-                <circle cx="75" cy="112" r="5" fill="#ffffff" />
-                
-                <!-- Thin Legs -->
-                <path d="M 68,135 L 68,145" stroke="#132143" stroke-width="2.5" stroke-linecap="round" />
-                <path d="M 82,135 L 82,145" stroke="#132143" stroke-width="2.5" stroke-linecap="round" />
-                
-                <!-- Robotic Speaker Body/Head (One-Eyed sphere) -->
-                <circle cx="75" cy="50" r="26" fill="#e0690f" stroke="#132143" stroke-width="2.5" />
-                <circle cx="75" cy="50" r="18" fill="#ffffff" stroke="#132143" stroke-width="2" />
-                <circle cx="75" cy="50" r="10" fill="#132143" />
-                <circle cx="75" cy="50" r="5" fill="#e0690f" />
-                <circle cx="72" cy="47" r="2.5" fill="#ffffff" />
-
-                <!-- Thin Stick Arms -->
-                <path d="M 49,52 Q 35,62 55,75" stroke="#132143" stroke-width="2.5" stroke-linecap="round" fill="none" />
-                <path d="M 101,52 Q 115,62 95,75" stroke="#132143" stroke-width="2.5" stroke-linecap="round" fill="none" />
-                
-                <!-- Antennas -->
-                <path d="M 65,25 Q 55,12 62,10" stroke="#132143" stroke-width="2" stroke-linecap="round" fill="none" />
-                <circle cx="62" cy="10" r="2.5" fill="#e0690f" />
-                <path d="M 85,25 Q 95,12 88,10" stroke="#132143" stroke-width="2" stroke-linecap="round" fill="none" />
-                <circle cx="88" cy="10" r="2.5" fill="#e0690f" />
-              </svg>
+              <img class="scope-panel-img" src="./images/scope-panel-img.png" alt="Activities and Experience Icon"
+                loading="lazy">
             </div>
             <ul class="scope-panel-list">
               <li>Brand Experiences & Activations</li>
@@ -188,36 +175,13 @@
         <!-- Panel 2: Virtual Engagement (Collapsed) -->
         <div class="scope-panel">
           <div class="scope-panel-title-collapsed">Virtual Engagement</div>
-          
+
           <div class="scope-panel-content">
             <h3 class="scope-panel-title-expanded">Virtual Engagement</h3>
             <div class="scope-panel-img-wrapper">
               <!-- High-quality custom inline SVG of a premium tech-eye on iPad matching Screenshot 4 -->
-              <svg width="180" height="130" viewBox="0 0 180 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- iPad Stand -->
-                <path d="M70 115 L110 115 L100 95 L80 95 Z" fill="#94a3b8" />
-                <!-- iPad Base -->
-                <rect x="30" y="25" width="120" height="80" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="3" />
-                <!-- iPad Screen -->
-                <rect x="36" y="31" width="108" height="68" rx="4" fill="#f8fafc" />
-                <circle cx="90" cy="94" r="2" fill="#64748b" />
-                
-                <!-- Eye Character on Screen -->
-                <!-- Main Body -->
-                <ellipse cx="90" cy="60" r="28" fill="#e2e8f0" stroke="#475569" stroke-width="2" />
-                <!-- Pupil -->
-                <circle cx="90" cy="60" r="16" fill="#132143" />
-                <circle cx="90" cy="60" r="8" fill="#e0690f" />
-                <circle cx="86" cy="56" r="3" fill="#ffffff" />
-                <!-- Antennas/Eyebrows -->
-                <path d="M 75,38 C 80,30 90,30 95,30" stroke="#e0690f" stroke-width="2" stroke-linecap="round" />
-                <circle cx="95" cy="30" r="3" fill="#e0690f" />
-                <!-- Hands -->
-                <path d="M 52,65 Q 40,55 45,45" stroke="#475569" stroke-width="2.5" stroke-linecap="round" />
-                <circle cx="45" cy="45" r="2.5" fill="#e0690f" />
-                <path d="M 128,65 Q 140,55 135,45" stroke="#475569" stroke-width="2.5" stroke-linecap="round" />
-                <circle cx="135" cy="45" r="2.5" fill="#e0690f" />
-              </svg>
+              <img class="scope-panel-img" src="./images/scope-panel-img.png" alt="Activities and Experience Icon"
+                loading="lazy">
             </div>
             <ul class="scope-panel-list">
               <li>Virtual Events & Meetings</li>
@@ -238,31 +202,13 @@
         <!-- Panel 3: Insightful Technologies (Collapsed) -->
         <div class="scope-panel">
           <div class="scope-panel-title-collapsed">Insightful Technologies</div>
-          
+
           <div class="scope-panel-content">
             <h3 class="scope-panel-title-expanded">Insightful Technologies</h3>
             <div class="scope-panel-img-wrapper">
               <!-- High-quality Custom SVG of standing Camera Eye matching Screenshot 5 -->
-              <svg width="150" height="130" viewBox="0 0 150 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Robotic Legs -->
-                <path d="M 60,95 L 45,120 L 55,120" stroke="#475569" stroke-width="3" stroke-linecap="round" />
-                <path d="M 90,95 L 105,120 L 95,120" stroke="#475569" stroke-width="3" stroke-linecap="round" />
-                
-                <!-- Camera Eye Sphere -->
-                <circle cx="75" cy="60" r="32" fill="#e2e8f0" stroke="#475569" stroke-width="3" />
-                <!-- Big Lens ring -->
-                <circle cx="75" cy="60" r="20" fill="#132143" stroke="#e0690f" stroke-width="2.5" />
-                <circle cx="75" cy="60" r="10" fill="#0b1328" />
-                <circle cx="71" cy="56" r="3.5" fill="#ffffff" />
-                
-                <!-- Side ears/brackets -->
-                <rect x="37" y="52" width="6" height="16" rx="3" fill="#e0690f" />
-                <rect x="107" y="52" width="6" height="16" rx="3" fill="#e0690f" />
-                
-                <!-- Antenna -->
-                <path d="M 75,28 L 75,12" stroke="#475569" stroke-width="2.5" />
-                <circle cx="75" cy="10" r="4" fill="#e0690f" />
-              </svg>
+              <img class="scope-panel-img" src="./images/scope-panel-img.png" alt="Activities and Experience Icon"
+                loading="lazy">
             </div>
             <ul class="scope-panel-list">
               <li>Audiovisual Equipment And Technology</li>
@@ -283,20 +229,13 @@
         <!-- Panel 4: Imagination Lab (Collapsed) -->
         <div class="scope-panel">
           <div class="scope-panel-title-collapsed">Imagination Lab</div>
-          
+
           <div class="scope-panel-content">
             <h3 class="scope-panel-title-expanded">Imagination Lab</h3>
             <div class="scope-panel-img-wrapper">
               <!-- High-quality Custom SVG representing virtual VR spaces -->
-              <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="60" cy="60" r="45" fill="var(--orange-light)" />
-                <path d="M35 50 C45 40, 75 40, 85 50 C95 60, 95 70, 85 80 C75 90, 45 90, 35 80 Z" stroke="var(--navy-primary)" stroke-width="4" stroke-linecap="round" />
-                <!-- VR headset outline -->
-                <rect x="42" y="52" width="36" height="18" rx="6" fill="var(--navy-primary)" />
-                <path d="M42 61 L78 61" stroke="var(--orange-primary)" stroke-width="2" />
-                <circle cx="48" cy="61" r="2" fill="var(--white)" />
-                <circle cx="72" cy="61" r="2" fill="var(--white)" />
-              </svg>
+              <img class="scope-panel-img" src="./images/scope-panel-img.png" alt="Activities and Experience Icon"
+                loading="lazy">
             </div>
             <ul class="scope-panel-list">
               <li>AR & VR Custom Activations</li>
@@ -318,23 +257,27 @@
   </section>
 
   <!-- Vision Flow Section -->
-  <section id="vision-flow" id="vision-flow" class="vision-flow-section" style="padding: 100px 0 20px 0; background-color: var(--bg-warm); text-align: center;">
+  <section id="vision-flow" id="vision-flow" class="vision-flow-section"
+    style="padding: 100px 0 20px 0; background-color: var(--bg-warm); text-align: center;">
     <div class="container">
-      <h2 class="scope-title" style="font-size: 2.8rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 40px;">
-        VISION <span class="dotted-text">FLOW</span>
+      <h2 class="scope-title"
+        style="font-size: 2.8rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 40px;">
+        VISION <span class="dotted-text" data-text="FLOW">FLOW</span>
       </h2>
       <!-- Light Gray placeholder box matching Figma Screenshot 1 -->
-      <div class="reveal mx-auto rounded-4" style="background-color: #f3f3f2; border: 1px solid rgba(19, 33, 67, 0.03); max-width: 1000px; height: 350px; display: flex; align-items: center; justify-content: center;">
+      <div class="reveal active mx-auto rounded-4"
+        style="background-color: #f3f3f2; border: 1px solid rgba(19, 33, 67, 0.03); max-width: 1000px; height: 350px; display: flex; align-items: center; justify-content: center;">
         <div class="text-center p-4">
           <i class="fa-solid fa-route text-muted mb-3" style="font-size: 3rem; opacity: 0.5;"></i>
-          <p class="text-muted mb-0" style="font-size: 1.05rem; font-weight: 600;">Interactive Journey Map & Event Telemetry Systems</p>
+          <p class="text-muted mb-0" style="font-size: 1.05rem; font-weight: 600;">Interactive Journey Map & Event
+            Telemetry Systems</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Caught Your Eye Portfolio CTA -->
-  <section class="eye-cta-container reveal">
+  <section class="eye-cta-container reveal active">
     <a href="blinks.html" class="eye-cta-button">
       <!-- Custom High-Fidelity Eye SVG inside Orange Button -->
       <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -351,7 +294,8 @@
     <div class="eye-cta-label-container">
       <!-- Curved handdrawn sketch arrow pointing to the button -->
       <svg class="eye-cta-handdrawn-arrow" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 20,80 Q 50,85 70,40 M 70,40 L 58,48 M 70,40 L 75,54" stroke="#132143" stroke-width="3" stroke-linecap="round" fill="none" />
+        <path d="M 20,80 Q 50,85 70,40 M 70,40 L 58,48 M 70,40 L 75,54" stroke="#132143" stroke-width="3"
+          stroke-linecap="round" fill="none" />
       </svg>
       <div class="eye-cta-text-hand">Caught your eye?</div>
       <div class="eye-cta-desc">Tap to explore our full portfolio and case studies</div>
@@ -359,13 +303,14 @@
   </section>
 
   <!-- Partners Section -->
-  <section class="partners-section reveal">
+  <section class="partners-section reveal active">
     <div class="container">
-      <h2 class="section-title">PARTNERS IN <span class="dotted-text">EXCELLENCE</span></h2>
+      <h2 class="section-title">PARTNERS IN <span class="dotted-text" data-text="EXCELLENCE">EXCELLENCE </span></h2>
       <p class="section-desc">
-        Trusted by industry leaders across sectors. Four decades of partnerships built on excellence, reliability, and results that speak for themselves
+        Trusted by industry leaders across sectors. Four decades of partnerships built on excellence, reliability, and
+        results that speak for themselves
       </p>
-      
+
       <div class="logo-grid">
         <!-- Row 1 -->
         <div class="logo-row">
@@ -375,13 +320,15 @@
               <rect x="0" y="5" width="4" height="20" rx="2" fill="currentColor" />
               <rect x="8" y="0" width="4" height="30" rx="2" fill="currentColor" />
               <rect x="16" y="8" width="4" height="17" rx="2" fill="currentColor" />
-              <text x="26" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16px" fill="currentColor">gopiai</text>
+              <text x="26" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16px"
+                fill="currentColor">gopiai</text>
             </svg>
           </div>
           <!-- Alcon -->
           <div class="partner-logo" title="Alcon">
             <svg viewBox="0 0 100 30" width="90" height="25">
-              <text x="0" y="22" font-family="'Outfit', sans-serif" font-weight="700" font-size="20px" letter-spacing="0.5px" fill="currentColor">Alcon</text>
+              <text x="0" y="22" font-family="'Outfit', sans-serif" font-weight="700" font-size="20px"
+                letter-spacing="0.5px" fill="currentColor">Alcon</text>
             </svg>
           </div>
           <!-- Novo Nordisk -->
@@ -389,7 +336,8 @@
             <svg viewBox="0 0 140 30" width="120" height="25">
               <circle cx="12" cy="15" r="9" stroke="currentColor" stroke-width="2" fill="none" />
               <path d="M12,6 L12,15 L18,18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
-              <text x="28" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12px" fill="currentColor">novo nordisk</text>
+              <text x="28" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12px"
+                fill="currentColor">novo nordisk</text>
             </svg>
           </div>
           <!-- Fidia -->
@@ -397,27 +345,34 @@
             <svg viewBox="0 0 100 30" width="90" height="25">
               <circle cx="10" cy="15" r="8" fill="none" stroke="currentColor" stroke-width="2" />
               <circle cx="14" cy="12" r="4" fill="currentColor" />
-              <text x="25" y="22" font-family="'Outfit', sans-serif" font-weight="800" font-size="18px" fill="currentColor">fidia</text>
+              <text x="25" y="22" font-family="'Outfit', sans-serif" font-weight="800" font-size="18px"
+                fill="currentColor">fidia</text>
             </svg>
           </div>
           <!-- Chanel -->
           <div class="partner-logo" title="Chanel">
             <svg viewBox="0 0 110 30" width="100" height="25">
-              <path d="M10,8 C15,8 18,12 18,15 C18,18 15,22 10,22 C6,22 4,18 4,15 C4,12 6,8 10,8 Z" stroke="currentColor" stroke-width="2.5" fill="none" />
-              <path d="M16,8 C11,8 8,12 8,15 C8,18 11,22 16,22 C20,22 22,18 22,15 C22,12 20,8 16,8 Z" stroke="currentColor" stroke-width="2.5" fill="none" />
-              <text x="32" y="21" font-family="'Outfit', sans-serif" font-weight="700" font-size="15px" letter-spacing="3px" fill="currentColor">CHANEL</text>
+              <path d="M10,8 C15,8 18,12 18,15 C18,18 15,22 10,22 C6,22 4,18 4,15 C4,12 6,8 10,8 Z"
+                stroke="currentColor" stroke-width="2.5" fill="none" />
+              <path d="M16,8 C11,8 8,12 8,15 C8,18 11,22 16,22 C20,22 22,18 22,15 C22,12 20,8 16,8 Z"
+                stroke="currentColor" stroke-width="2.5" fill="none" />
+              <text x="32" y="21" font-family="'Outfit', sans-serif" font-weight="700" font-size="15px"
+                letter-spacing="3px" fill="currentColor">CHANEL</text>
             </svg>
           </div>
           <!-- AstraZeneca -->
           <div class="partner-logo" title="AstraZeneca">
             <svg viewBox="0 0 130 30" width="110" height="25">
-              <path d="M10,6 L18,15 L10,24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-              <path d="M15,6 L23,15 L15,24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-              <text x="28" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12px" fill="currentColor">AstraZeneca</text>
+              <path d="M10,6 L18,15 L10,24" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" fill="none" />
+              <path d="M15,6 L23,15 L15,24" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" fill="none" />
+              <text x="28" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12px"
+                fill="currentColor">AstraZeneca</text>
             </svg>
           </div>
         </div>
-        
+
         <!-- Row 2 -->
         <div class="logo-row">
           <!-- Al Tayer -->
@@ -426,118 +381,141 @@
               <path d="M5 25C15 15 30 12 40 12C30 15 15 22 5 25Z" fill="currentColor" />
               <path d="M8 28C20 22 32 20 40 20C32 22 20 26 8 28Z" fill="currentColor" />
               <path d="M7 21C17 12 28 8 36 8C28 12 17 18 7 21Z" fill="currentColor" />
-              <text x="44" y="16" font-family="'Outfit', sans-serif" font-weight="700" font-size="11px" fill="currentColor">al tayer</text>
-              <text x="44" y="24" font-family="'Outfit', sans-serif" font-weight="600" font-size="8px" letter-spacing="1px" fill="currentColor">events</text>
+              <text x="44" y="16" font-family="'Outfit', sans-serif" font-weight="700" font-size="11px"
+                fill="currentColor">al tayer</text>
+              <text x="44" y="24" font-family="'Outfit', sans-serif" font-weight="600" font-size="8px"
+                letter-spacing="1px" fill="currentColor">events</text>
             </svg>
           </div>
           <!-- Sanofi -->
           <div class="partner-logo" title="Sanofi">
             <svg viewBox="0 0 100 30" width="90" height="25">
-              <text x="0" y="22" font-family="'Outfit', sans-serif" font-weight="700" font-size="20px" fill="currentColor">sanofi</text>
+              <text x="0" y="22" font-family="'Outfit', sans-serif" font-weight="700" font-size="20px"
+                fill="currentColor">sanofi</text>
             </svg>
           </div>
           <!-- Canon -->
           <div class="partner-logo" title="Canon">
             <svg viewBox="0 0 100 30" width="90" height="25">
-              <text x="0" y="23" font-family="'Outfit', sans-serif" font-weight="900" font-size="22px" fill="currentColor">Canon</text>
+              <text x="0" y="23" font-family="'Outfit', sans-serif" font-weight="900" font-size="22px"
+                fill="currentColor">Canon</text>
             </svg>
           </div>
           <!-- Vifor Pharma -->
           <div class="partner-logo" title="Vifor Pharma">
             <svg viewBox="0 0 120 30" width="100" height="25">
-              <path d="M12,4 L12,26 M4,15 L20,15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none" />
-              <text x="26" y="15" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10px" fill="currentColor">VIFOR</text>
-              <text x="26" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="9px" letter-spacing="0.5px" fill="currentColor">PHARMA</text>
+              <path d="M12,4 L12,26 M4,15 L20,15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                fill="none" />
+              <text x="26" y="15" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10px"
+                fill="currentColor">VIFOR</text>
+              <text x="26" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="9px"
+                letter-spacing="0.5px" fill="currentColor">PHARMA</text>
             </svg>
           </div>
           <!-- Gilead -->
           <div class="partner-logo" title="Gilead">
             <svg viewBox="0 0 100 30" width="90" height="25">
-              <path d="M4,15 C4,8 10,4 16,10 C20,15 16,26 10,22 C6,18 4,16 4,15 Z" fill="none" stroke="currentColor" stroke-width="2" />
-              <text x="26" y="22" font-family="'Outfit', sans-serif" font-weight="700" font-size="16px" fill="currentColor">GILEAD</text>
+              <path d="M4,15 C4,8 10,4 16,10 C20,15 16,26 10,22 C6,18 4,16 4,15 Z" fill="none" stroke="currentColor"
+                stroke-width="2" />
+              <text x="26" y="22" font-family="'Outfit', sans-serif" font-weight="700" font-size="16px"
+                fill="currentColor">GILEAD</text>
             </svg>
           </div>
           <!-- Janssen -->
           <div class="partner-logo" title="Janssen">
             <svg viewBox="0 0 100 30" width="90" height="25">
-              <text x="0" y="22" font-family="'Outfit', sans-serif" font-weight="700" font-size="18px" fill="currentColor">janssen</text>
+              <text x="0" y="22" font-family="'Outfit', sans-serif" font-weight="700" font-size="18px"
+                fill="currentColor">janssen</text>
             </svg>
           </div>
         </div>
-        
+
         <!-- Row 3 -->
         <div class="logo-row">
           <!-- Pfizer -->
           <div class="partner-logo" title="Pfizer">
             <svg viewBox="0 0 100 30" width="90" height="25">
-              <ellipse cx="28" cy="15" rx="20" ry="12" stroke="currentColor" stroke-width="2.5" fill="none" transform="rotate(-15 28 15)" />
-              <text x="14" y="20" font-family="'Outfit', sans-serif" font-weight="800" font-size="14px" italic fill="currentColor">Pfizer</text>
+              <ellipse cx="28" cy="15" rx="20" ry="12" stroke="currentColor" stroke-width="2.5" fill="none"
+                transform="rotate(-15 28 15)" />
+              <text x="14" y="20" font-family="'Outfit', sans-serif" font-weight="800" font-size="14px" italic
+                fill="currentColor">Pfizer</text>
             </svg>
           </div>
           <!-- Acino -->
           <div class="partner-logo" title="Acino">
             <svg viewBox="0 0 100 30" width="90" height="25">
-              <text x="0" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20px" fill="currentColor">acino</text>
+              <text x="0" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20px"
+                fill="currentColor">acino</text>
             </svg>
           </div>
           <!-- LVMH -->
           <div class="partner-logo" title="LVMH">
             <svg viewBox="0 0 100 30" width="90" height="25">
-              <text x="0" y="22" font-family="'Outfit', sans-serif" font-weight="500" font-size="21px" letter-spacing="1px" fill="currentColor">LVMH</text>
+              <text x="0" y="22" font-family="'Outfit', sans-serif" font-weight="500" font-size="21px"
+                letter-spacing="1px" fill="currentColor">LVMH</text>
             </svg>
           </div>
           <!-- Grohe -->
           <div class="partner-logo" title="Grohe">
             <svg viewBox="0 0 100 30" width="90" height="25">
-              <text x="0" y="21" font-family="'Outfit', sans-serif" font-weight="700" font-size="18px" letter-spacing="0.5px" fill="currentColor">GROHE</text>
+              <text x="0" y="21" font-family="'Outfit', sans-serif" font-weight="700" font-size="18px"
+                letter-spacing="0.5px" fill="currentColor">GROHE</text>
             </svg>
           </div>
           <!-- Ismail Industries -->
           <div class="partner-logo" title="Ismail Industries">
             <svg viewBox="0 0 150 30" width="130" height="25">
-              <circle cx="12" cy="15" r="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,3" fill="none" />
+              <circle cx="12" cy="15" r="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,3"
+                fill="none" />
               <polygon points="12,10 14,14 18,14 15,17 16,21 12,19 8,21 9,17 6,14 10,14" fill="currentColor" />
-              <text x="26" y="14" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9px" fill="currentColor">Ismail</text>
-              <text x="26" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="7px" fill="currentColor">Industries Limited</text>
+              <text x="26" y="14" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9px"
+                fill="currentColor">Ismail</text>
+              <text x="26" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="7px"
+                fill="currentColor">Industries Limited</text>
             </svg>
           </div>
           <!-- Stada -->
           <div class="partner-logo" title="Stada">
             <svg viewBox="0 0 90 30" width="80" height="25">
-              <text x="0" y="22" font-family="'Outfit', sans-serif" font-weight="700" font-size="18px" fill="currentColor">STADA</text>
+              <text x="0" y="22" font-family="'Outfit', sans-serif" font-weight="700" font-size="18px"
+                fill="currentColor">STADA</text>
             </svg>
           </div>
           <!-- Vieco -->
           <div class="partner-logo" title="Vieco">
             <svg viewBox="0 0 90 30" width="80" height="25">
               <path d="M4,6 L12,22 L20,6" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none" />
-              <text x="26" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16px" fill="currentColor">VIECO</text>
+              <text x="26" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16px"
+                fill="currentColor">VIECO</text>
             </svg>
           </div>
         </div>
       </div>
-      
+
       <div class="partners-handdrawn-footer reveal">Chosen by Industry leaders</div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section class="testimonials-section reveal">
+  <section class="testimonials-section reveal active">
     <div class="container">
-      <h2 class="section-title">THROUGH OUR <span class="dotted-text">CLIENT'S EYES</span></h2>
+      <h2 class="section-title">THROUGH OUR <span class="dotted-text" data-text="CLIENT'S EYES ">CLIENT'S EYES</span>
+      </h2>
       <p class="section-desc">
         See what our clients say about the experiences we bring to life.
       </p>
-      
+
       <div class="testimonials-grid">
         <!-- Card 1 -->
         <div class="testimonial-circle-card">
           <!-- Curved Stars SVG curving along top-right border -->
           <svg class="curved-stars-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <path id="star" d="M 0,-6 L 1.8,-1.8 L 6.2,-1.8 L 2.7,1 L 4,5.4 L 0,2.7 L -4,5.4 L -2.7,1 L -6.2,-1.8 L -1.8,-1.8 Z" fill="#e0690f" />
+              <path id="star"
+                d="M 0,-6 L 1.8,-1.8 L 6.2,-1.8 L 2.7,1 L 4,5.4 L 0,2.7 L -4,5.4 L -2.7,1 L -6.2,-1.8 L -1.8,-1.8 Z"
+                fill="#e0690f" />
             </defs>
-            <g transform="translate(20, 100)">
+            <g transform="translate(0, 100)">
               <use href="#star" x="19.4" y="-72.4" transform="rotate(15 19.4 -72.4)" />
               <use href="#star" x="37.5" y="-64.9" transform="rotate(30 37.5 -64.9)" />
               <use href="#star" x="53.0" y="-53.0" transform="rotate(45 53.0 -53.0)" />
@@ -545,12 +523,13 @@
               <use href="#star" x="72.4" y="-19.4" transform="rotate(75 72.4 -19.4)" />
             </g>
           </svg>
-          
+
           <div class="testimonial-avatar">L</div>
           <div class="testimonial-name">Liam John</div>
           <div class="testimonial-meta">8/16/2018 via Google</div>
           <p class="testimonial-body">
-            Though the restaurant was crowded, we were seated right away. Our waitress Sarah B. was perfect! Always nice, always there when we needed her and checked up on us regularly. Don't know how she did...
+            Though the restaurant was crowded, we were seated right away. Our waitress Sarah B. was perfect! Always
+            nice, always there when we needed her and checked up on us regularly. Don't know how she did...
           </p>
         </div>
 
@@ -559,9 +538,11 @@
           <!-- Curved Stars SVG curving along top-right border -->
           <svg class="curved-stars-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <path id="star" d="M 0,-6 L 1.8,-1.8 L 6.2,-1.8 L 2.7,1 L 4,5.4 L 0,2.7 L -4,5.4 L -2.7,1 L -6.2,-1.8 L -1.8,-1.8 Z" fill="#e0690f" />
+              <path id="star"
+                d="M 0,-6 L 1.8,-1.8 L 6.2,-1.8 L 2.7,1 L 4,5.4 L 0,2.7 L -4,5.4 L -2.7,1 L -6.2,-1.8 L -1.8,-1.8 Z"
+                fill="#e0690f" />
             </defs>
-            <g transform="translate(20, 100)">
+            <g transform="translate(0, 100)">
               <use href="#star" x="19.4" y="-72.4" transform="rotate(15 19.4 -72.4)" />
               <use href="#star" x="37.5" y="-64.9" transform="rotate(30 37.5 -64.9)" />
               <use href="#star" x="53.0" y="-53.0" transform="rotate(45 53.0 -53.0)" />
@@ -569,12 +550,13 @@
               <use href="#star" x="72.4" y="-19.4" transform="rotate(75 72.4 -19.4)" />
             </g>
           </svg>
-          
+
           <div class="testimonial-avatar">L</div>
           <div class="testimonial-name">Liam John</div>
           <div class="testimonial-meta">8/16/2018 via Google</div>
           <p class="testimonial-body">
-            Though the restaurant was crowded, we were seated right away. Our waitress Sarah B. was perfect! Always nice, always there when we needed her and checked up on us regularly. Don't know how she did...
+            Though the restaurant was crowded, we were seated right away. Our waitress Sarah B. was perfect! Always
+            nice, always there when we needed her and checked up on us regularly. Don't know how she did...
           </p>
         </div>
 
@@ -583,9 +565,11 @@
           <!-- Curved Stars SVG curving along top-right border -->
           <svg class="curved-stars-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <path id="star" d="M 0,-6 L 1.8,-1.8 L 6.2,-1.8 L 2.7,1 L 4,5.4 L 0,2.7 L -4,5.4 L -2.7,1 L -6.2,-1.8 L -1.8,-1.8 Z" fill="#e0690f" />
+              <path id="star"
+                d="M 0,-6 L 1.8,-1.8 L 6.2,-1.8 L 2.7,1 L 4,5.4 L 0,2.7 L -4,5.4 L -2.7,1 L -6.2,-1.8 L -1.8,-1.8 Z"
+                fill="#e0690f" />
             </defs>
-            <g transform="translate(20, 100)">
+            <g transform="translate(0, 100)">
               <use href="#star" x="19.4" y="-72.4" transform="rotate(15 19.4 -72.4)" />
               <use href="#star" x="37.5" y="-64.9" transform="rotate(30 37.5 -64.9)" />
               <use href="#star" x="53.0" y="-53.0" transform="rotate(45 53.0 -53.0)" />
@@ -593,16 +577,17 @@
               <use href="#star" x="72.4" y="-19.4" transform="rotate(75 72.4 -19.4)" />
             </g>
           </svg>
-          
+
           <div class="testimonial-avatar">L</div>
           <div class="testimonial-name">Liam John</div>
           <div class="testimonial-meta">8/16/2018 via Google</div>
           <p class="testimonial-body">
-            Though the restaurant was crowded, we were seated right away. Our waitress Sarah B. was perfect! Always nice, always there when we needed her and checked up on us regularly. Don't know how she did...
+            Though the restaurant was crowded, we were seated right away. Our waitress Sarah B. was perfect! Always
+            nice, always there when we needed her and checked up on us regularly. Don't know how she did...
           </p>
         </div>
       </div>
-      
+
       <!-- Testimonials Pagination Dots -->
       <div class="testimonials-dots-nav">
         <button class="testimonial-dot-btn active"></button>
@@ -614,18 +599,19 @@
   </section>
 
   <!-- Our Blings Section -->
-  <section class="blings-home-section reveal">
+  <section class="blings-home-section reveal active">
     <div class="container">
-      <h2 class="section-title">OUR <span class="dotted-text">BLINGS</span></h2>
+      <h2 class="section-title">OUR <span class="dotted-text" data-text="BLINGS">BLINGS</span></h2>
       <p class="section-desc">
         Insights, stories, and innovations from the world of Al Tayer Events
       </p>
-      
+
       <div class="blings-home-grid">
         <!-- Card 1 -->
         <article class="bling-card-home">
           <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&q=80" alt="Dirt bike action" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&q=80"
+              alt="Dirt bike action" loading="lazy">
             <span class="bling-badge-top">Case Study</span>
           </div>
           <div class="bling-body-home">
@@ -640,7 +626,8 @@
         <!-- Card 2 -->
         <article class="bling-card-home">
           <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=600&q=80" alt="Hanging red flag" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=600&q=80"
+              alt="Hanging red flag" loading="lazy">
             <span class="bling-badge-top">Article</span>
           </div>
           <div class="bling-body-home">
@@ -655,7 +642,8 @@
         <!-- Card 3 -->
         <article class="bling-card-home">
           <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="Person reading" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80"
+              alt="Person reading" loading="lazy">
             <span class="bling-badge-top">Case Study</span>
           </div>
           <div class="bling-body-home">
@@ -667,38 +655,41 @@
           </div>
         </article>
       </div>
-      
+
       <a href="blinks.html" class="blings-explore-all-link">Explore All Blinks →</a>
     </div>
   </section>
 
   <!-- Share Your Vision Section -->
-  <section class="share-vision-section reveal" id="Contact">
+  <section class="share-vision-section reveal active" id="Contact">
     <div class="container">
       <div class="row align-items-center g-5">
         <!-- Form Column -->
         <div class="col-lg-7">
-          <h2 class="section-title">Share Your <span class="dotted-text">VISION</span></h2>
+          <h2 class="section-title">Share Your <span class="dotted-text" data-text="VISION">VISION</span></h2>
           <p class="section-desc">
             Share a quick snapshot of your brief we'll take care of the rest ;)
           </p>
-          
+
           <form id="homeContactForm" novalidate>
             <!-- Name -->
             <div class="form-group mb-3">
-              <input type="text" id="homeFullName" class="form-control contact-input contact-input-name" placeholder="Name" required>
+              <input type="text" id="homeFullName" class="form-control contact-input contact-input-name"
+                placeholder="Name" required>
               <div class="invalid-feedback">Please enter your name.</div>
             </div>
-            
+
             <!-- Email -->
             <div class="form-group mb-3">
-              <input type="email" id="homeEmail" class="form-control contact-input contact-input-email" placeholder="Email" required>
+              <input type="email" id="homeEmail" class="form-control contact-input contact-input-email"
+                placeholder="Email" required>
               <div class="invalid-feedback">Please enter a valid email.</div>
             </div>
 
             <!-- Message -->
             <div class="form-group mb-4">
-              <textarea id="homeMessage" class="form-control contact-input contact-input-message" rows="5" placeholder="Message" required></textarea>
+              <textarea id="homeMessage" class="form-control contact-input contact-input-message" rows="5"
+                placeholder="Message" required></textarea>
               <div class="invalid-feedback">Please enter your message.</div>
             </div>
 
@@ -720,16 +711,20 @@
             </defs>
             <!-- Envelope Flaps defined as polygons filled with the dot grid, separated by thick white gaps representing folds -->
             <!-- Top Flap -->
-            <polygon points="10,10 390,10 200,140" fill="url(#home-envelope-dot-grid)" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" />
-            
+            <polygon points="10,10 390,10 200,140" fill="url(#home-envelope-dot-grid)" stroke="#ffffff" stroke-width="6"
+              stroke-linejoin="round" />
+
             <!-- Left Flap -->
-            <polygon points="10,10 10,290 200,140" fill="url(#home-envelope-dot-grid)" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" />
-            
+            <polygon points="10,10 10,290 200,140" fill="url(#home-envelope-dot-grid)" stroke="#ffffff" stroke-width="6"
+              stroke-linejoin="round" />
+
             <!-- Right Flap -->
-            <polygon points="390,10 390,290 200,140" fill="url(#home-envelope-dot-grid)" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" />
-            
+            <polygon points="390,10 390,290 200,140" fill="url(#home-envelope-dot-grid)" stroke="#ffffff"
+              stroke-width="6" stroke-linejoin="round" />
+
             <!-- Bottom Flap -->
-            <polygon points="10,290 390,290 200,140" fill="url(#home-envelope-dot-grid)" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" />
+            <polygon points="10,290 390,290 200,140" fill="url(#home-envelope-dot-grid)" stroke="#ffffff"
+              stroke-width="6" stroke-linejoin="round" />
           </svg>
         </div>
       </div>
@@ -737,18 +732,23 @@
   </section>
 
   <!-- Success Modal Popup -->
-  <div class="modal fade" id="homeSuccessModal" tabindex="-1" aria-labelledby="homeSuccessModalLabel" aria-hidden="true">
+  <div class="modal fade" id="homeSuccessModal" tabindex="-1" aria-labelledby="homeSuccessModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content rounded-4 border-0 p-4" style="background-color: var(--white); box-shadow: var(--shadow-card);">
+      <div class="modal-content rounded-4 border-0 p-4"
+        style="background-color: var(--white); box-shadow: var(--shadow-card);">
         <div class="modal-body text-center">
-          <div class="mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background-color: var(--orange-light); color: var(--orange-primary); font-size: 2.2rem;">
+          <div class="mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle"
+            style="width: 70px; height: 70px; background-color: var(--orange-light); color: var(--orange-primary); font-size: 2.2rem;">
             <i class="fa-regular fa-circle-check"></i>
           </div>
           <h4 class="fw-bold mb-2" style="color: var(--navy-primary);">Brief Submitted!</h4>
           <p class="text-muted" style="font-size: 0.95rem;">
-            Thank you for reaching out. An event consultant from your selected division will review your brief and contact you within 24 hours.
+            Thank you for reaching out. An event consultant from your selected division will review your brief and
+            contact you within 24 hours.
           </p>
-          <button type="button" class="btn px-4 py-2 mt-3 rounded-pill" data-bs-dismiss="modal" style="background-color: var(--orange-primary); color: var(--white); font-weight: 600; border: none;">
+          <button type="button" class="btn px-4 py-2 mt-3 rounded-pill" data-bs-dismiss="modal"
+            style="background-color: var(--orange-primary); color: var(--white); font-weight: 600; border: none;">
             Close Window
           </button>
         </div>
@@ -767,13 +767,14 @@
               <div class="footer-brand-text">al tayer</div>
               <div class="footer-brand-desc">events</div>
             </div>
-            <svg class="footer-logo-svg ms-2" width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="footer-logo-svg ms-2" width="30" height="30" viewBox="0 0 100 100" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path d="M10 80C30 50 70 40 90 40C70 50 30 70 10 80Z" fill="#e0690f" />
               <path d="M20 90C45 75 75 70 90 70C75 75 45 85 20 90Z" fill="#d96a06" />
               <path d="M15 70C35 40 65 30 80 30C65 40 35 60 15 70Z" fill="#e0690f" />
             </svg>
           </div>
-          
+
           <div class="footer-contact-item mb-3 d-flex align-items-start gap-2">
             <i class="fa-solid fa-location-dot footer-icon-orange mt-1"></i>
             <span class="footer-contact-text text-start">
@@ -782,18 +783,19 @@
               PO Box 2623 United Arab Emirates
             </span>
           </div>
-          
+
           <div class="footer-contact-item mb-4 d-flex align-items-center gap-2">
             <i class="fa-solid fa-globe footer-icon-orange"></i>
             <a href="http://www.altayerevents.com" target="_blank" class="footer-link-navy">www.altayerevents.com</a>
           </div>
-          
+
           <div class="footer-socials">
             <a href="#" class="footer-social-btn"><i class="fa-regular fa-comment-dots"></i></a>
-            <a href="https://www.linkedin.com" target="_blank" class="footer-social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" class="footer-social-btn"><i
+                class="fa-brands fa-linkedin-in"></i></a>
           </div>
         </div>
-        
+
         <!-- Column 2: Company Info -->
         <div class="col-lg-3 offset-lg-1 col-md-6 footer-widget">
           <h5 class="footer-widget-title-orange mb-4">Company Info</h5>
@@ -806,28 +808,28 @@
             <li><a href="contact.html" class="footer-link-orange fw-bold">Contact Us</a></li>
           </ul>
         </div>
-        
+
         <!-- Column 3: Contact Details -->
         <div class="col-lg-4 col-md-6 footer-widget">
           <h5 class="footer-widget-title-orange mb-4">Contact</h5>
-          
+
           <div class="footer-contact-item mb-3 d-flex align-items-center gap-2">
             <i class="fa-solid fa-phone footer-icon-orange"></i>
             <a href="tel:+971526042430" class="footer-link-navy">+971 526042430</a>
           </div>
-          
+
           <div class="footer-contact-item mb-3 d-flex align-items-center gap-2">
             <i class="fa-solid fa-phone footer-icon-orange"></i>
             <a href="tel:+97142055069" class="footer-link-navy">+971 4 2055069</a>
           </div>
-          
+
           <div class="footer-contact-item mb-3 d-flex align-items-center gap-2">
             <i class="fa-regular fa-envelope footer-icon-orange"></i>
             <a href="mailto:altayerevents@altayer.com" class="footer-link-navy">altayerevents@altayer.com</a>
           </div>
         </div>
       </div>
-      
+
       <!-- Footer Bottom Centered -->
       <div class="footer-bottom-centered text-center">
         <p class="footer-copyright-text mb-0">
@@ -839,8 +841,9 @@
 
   <!-- Bootstrap 5.3 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
+
   <!-- Custom Script -->
   <script src="js/main.js"></script>
 </body>
+
 </html>

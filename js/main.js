@@ -171,4 +171,88 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+  // 8. Hero Image Slider – Auto-play + Dot Navigation
+  (function initHeroSlider() {
+    const slides       = document.querySelectorAll('.hero-slide');
+    const dots         = document.querySelectorAll('.hero-dot');
+    const subtitleEl   = document.getElementById('hero-subtitle-text');
+    const container    = document.querySelector('.hero-graphic-container');
+
+    if (!slides.length) return;
+
+    // Per-slide subtitle content (index matches slide order)
+    const subtitles = [
+      'Born in a lasting city with ever-growing appetite for evolving.<br>Dubai has always been a leading tourism and events hub. Al-Tayer travel and Al-Tayer events continue to grow with this market.',
+      'Learning that powers better service.<br>Our internal L&D system keeps our team updated, skilled, and ready to deliver stronger results. Through continuous training, workshops, and knowledge sharing.',
+      'Decades of trust, moments of magic.<br>From intimate gatherings to grand-scale spectacles, every Al Tayer event is crafted with meticulous attention to detail and an unwavering commitment to excellence.',
+      'Innovation meets tradition.<br>We blend cutting-edge technology with time-honoured hospitality to create experiences that resonate deeply with every audience we serve across the region.',
+      'Your vision, our expertise.<br>We transform bold ideas into unforgettable realities — partnering with visionary brands to design and deliver events that leave lasting impressions.'
+    ];
+
+    let current  = 0;
+    let timer    = null;
+    const DELAY  = 4500; // ms between auto-advances
+
+    function goTo(next) {
+      if (next === current) return;
+
+      const prev = current;
+      current = next;
+
+      // ── Slide crossfade ──
+      slides[prev].classList.add('leaving');
+      slides[prev].classList.remove('active');
+      slides[next].classList.add('active');
+      slides[next].classList.remove('leaving');
+
+      // Clean up 'leaving' after transition ends
+      const onEnd = () => {
+        slides[prev].classList.remove('leaving');
+        slides[prev].removeEventListener('transitionend', onEnd);
+      };
+      slides[prev].addEventListener('transitionend', onEnd);
+
+      // ── Dots ──
+      dots.forEach(d => d.classList.remove('active'));
+      if (dots[next]) dots[next].classList.add('active');
+
+      // ── Subtitle crossfade ──
+      if (subtitleEl && subtitles[next]) {
+        subtitleEl.classList.add('fade-out');
+        subtitleEl.classList.remove('fade-in');
+        setTimeout(() => {
+          subtitleEl.innerHTML = subtitles[next];
+          subtitleEl.classList.remove('fade-out');
+          subtitleEl.classList.add('fade-in');
+        }, 480);
+      }
+    }
+
+    function advance() {
+      goTo((current + 1) % slides.length);
+    }
+
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(advance, DELAY);
+    }
+
+    // Dot click handlers
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        goTo(i);
+        startTimer(); // reset auto-play timer on manual click
+      });
+    });
+
+    // Pause auto-play on hover
+    if (container) {
+      container.addEventListener('mouseenter', () => clearInterval(timer));
+      container.addEventListener('mouseleave', startTimer);
+    }
+
+    // Kick off
+    startTimer();
+  })();
+
 });
